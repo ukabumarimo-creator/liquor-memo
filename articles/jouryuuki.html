@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>liquor memo</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d4af37;
+  --bg:#0b0b0b;
+  --text:#f5f5f5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Noto Serif JP',serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+
+.background{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.95));
+  z-index:-1;
+}
+
+header{
+  text-align:center;
+  padding:60px 20px 30px;
+}
+
+header h1{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:2rem;
+}
+
+header p{
+  color:#999;
+  margin-top:8px;
+}
+
+.content{
+  max-width:1000px;
+  margin:0 auto;
+  padding:30px 20px 60px;
+}
+
+.content h1{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:1.5rem;
+}
+
+.content p{
+  color:#999;
+  margin: top 8px;
+  font-size:1.5rem;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:#777;
+  font-size:.75rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer p{
+  margin:4px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+  <h1>蒸留方法と蒸留器</h1>
+  <p>Liquor Notes & Knowledge Base</p>
+</header>
+
+<main class="content">
+    <ul><li><h1>ポットスチル（単式蒸留器）</h1><p>主な用途</p><ul><li>モルトウイスキー</li><li>シングルモルト</li><li>アイリッシュポットスチル</li></ul>
+    <p>特徴</p>バッチ式（1回ずつ蒸留）<p>味への影響</p>成分が多く残る、重厚、オイリー、香り豊か</li>
+    <br><li><h1>カフェスチル（連続式蒸留器）</h1><p>主な用途</p><ul><li>グレーンウイスキー</li><li>バーボン</li><li>テネシー</li></ul>
+    <p>特徴</p>連続蒸留<p>味への影響</p>高純度アルコールになる、軽い、クリア、スムース
+    <p>蒸留回数</p><ul><li>2回蒸留<br>スコッチの主流<br>特徴：香味が残る、力強い</li><li>3回蒸留<br>アイリッシュに多い<br>特徴：軽い、なめらか</li></ul></li></ul><br>
+    <h1>蒸留器の形状</h1><ul><li>背が高い<br>味：軽い、フルーティ</li><li>背が低い:<br>味：重い、オイリー</li>
+        <li>ラインアームが上向き<br>軽い成分だけが通る、華やか</li><li>ラインアームが下向き</li>重い成分も通る、濃厚
+        <li>リフラックス（蒸気が冷えて釜に戻る現象）が多い<br>軽い、綺麗</li><li>リフラックスが少ない<br>重い、力強い</li></ul>
+
+</main>
+
+</div>
+
+<footer>
+  <p>© 2026 ukabu.marimo tk HP</p>
+  <p>
+    掲載内容には誤記・表記ゆれ・情報更新の遅延が含まれる場合があります。
+  </p>
+  <p>
+    商品名・商標・ボトルデザイン等の権利は各権利者に帰属します。
+  </p>
+</footer>
+
+</body>
+</html>

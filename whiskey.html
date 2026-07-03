@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>whiskey memo</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d4af37;
+  --bg:#0b0b0b;
+  --text:#f5f5f5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Noto Serif JP',serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+
+.background{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.95));
+  z-index:-1;
+}
+
+header{
+  text-align:center;
+  padding:60px 20px 30px;
+}
+
+header h1{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:2rem;
+}
+
+header p{
+  color:#999;
+  margin-top:8px;
+}
+
+.search-wrap{
+  max-width:700px;
+  margin:auto;
+  padding:0 15px 20px;
+}
+
+.search{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#222;
+  color:white;
+  font-size:1rem;
+}
+
+.search:focus{
+  outline:none;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:0 15px 60px;
+}
+
+.article-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+.article{
+  background:rgba(22,22,22,.8);
+  border:1px solid rgba(212,175,55,.15);
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:15px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.article:hover{
+  border-color:var(--gold);
+}
+
+.article-title{
+  color:var(--gold);
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.article-desc{
+  color:#aaa;
+  font-size:.9rem;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:#777;
+  font-size:.75rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer p{
+  margin:4px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+  <h1>Whiskey memo</h1>
+  <p>Liquor Notes & Knowledge Base</p>
+</header>
+
+<div class="search-wrap">
+  <input
+    type="text"
+    class="search"
+    id="searchInput"
+    placeholder="記事を検索">
+</div>
+
+<div style="text-align: center;">
+ウイスキー（Whisky/Whiskey）は、穀物を原料として造られる蒸留酒である。<br>
+大麦麦芽（モルト）をはじめ、小麦、ライ麦、トウモロコシなどを糖化・発酵させて蒸留<br>
+木樽で熟成することで独特の香りや味わいが生まれる。<br>
+ウイスキーの原料や製法、熟成期間は国や地域によって異なり、それぞれ法律で定められている。<br>
+代表的な生産国には<br>スコットランド、アイルランド、アメリカ、カナダ、日本などがあり<br>
+ウイスキーの味わいは、使用する穀物、発酵方法、蒸留器の形状、樽の種類や熟成期間<br>
+さらには熟成する地域の気候によって大きく変化する。
+</div>
+
+<div class="container" id="articleContainer">
+
+  <a href="articles/nomikata.html" class="article-link">
+    <div class="article">
+      <div class="article-title">飲み方ガイド</div>
+      <div class="article-desc">
+        ウイスキーを楽しもう
+      </div>
+    </div>
+  </a>
+
+  <a href="articles/tiiki.html" class="article-link">
+    <div class="article">
+      <div class="article-title">ウイスキーの地域性</div>
+      <div class="article-desc">
+        ウイスキーの地域と個性
+      </div>
+    </div>
+  </a>
+
+  <a href="articles/nagare.html" class="article-link">
+    <div class="article">
+      <div class="article-title">ウイスキーの製造工程</div>
+      <div class="article-desc">
+        ウイスキーができるまで
+      </div>
+    </div>
+  </a>
+
+  <a href="articles/syurui.html" class="article-link">
+    <div class="article">
+      <div class="article-title">ウイスキーの種類と原酒</div>
+      <div class="article-desc">
+        モルト、グレーン、ブレンデッドetc.
+      </div>
+    </div>
+  </a>
+
+  <a href="articles/taru.html" class="article-link">
+    <div class="article">
+      <div class="article-title">ウイスキーの熟成樽について</div>
+      <div class="article-desc">
+        木材と前歴
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <p>© 2026 ukabu.marimo tk HP</p>
+  <p>
+    掲載内容には誤記・表記ゆれ・情報更新の遅延が含まれる場合があります。
+  </p>
+  <p>
+    商品名・商標・ボトルデザイン等の権利は各権利者に帰属します。
+  </p>
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const articleLinks = document.querySelectorAll(".article-link");
+
+searchInput.addEventListener("input", () => {
+  const keyword = searchInput.value.toLowerCase().trim();
+
+  articleLinks.forEach(link => {
+    const text = link.textContent.toLowerCase();
+
+    if (text.includes(keyword)) {
+      link.style.display = "block";
+    } else {
+      link.style.display = "none";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
